@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+/* Власні токени дизайну (Tailwind v4): створюють класи bg-brand-500, text-brand-400, font-display тощо */
+@theme {
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --font-display: "Segoe UI", "Inter", system-ui, sans-serif;
+}
+
+/*
+  Світла тема (Лабораторна №4).
+  Клас .light-mode ставиться на <body> і перевизначає змінні кольорів,
+  тому всі наявні Tailwind-класи (bg-slate-900, text-slate-300 тощо)
+  автоматично перефарбовуються без правок у кожному компоненті.
+*/
+body {
+  background-color: var(--color-slate-950);
+  transition: background-color 0.3s ease;
+}
+
+body.light-mode {
+  --color-white: #0f172a;
+  --color-slate-950: #f1f5f9;
+  --color-slate-900: #ffffff;
+  --color-slate-800: #e2e8f0;
+  --color-slate-700: #cbd5e1;
+  --color-slate-600: #94a3b8;
+  --color-slate-400: #475569;
+  --color-slate-300: #334155;
+  --color-slate-200: #1e293b;
+  --color-emerald-950: #d1fae5;
+  --color-brand-300: #047857;
+  --color-brand-400: #059669;
+}
